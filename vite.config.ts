@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
+    base: "./",   // ← REQUIRED FOR VERCEL (Fixes blank white screen)
     plugins: [react()],
     define: {
       // This replaces process.env.API_KEY in the code with the actual value during build
