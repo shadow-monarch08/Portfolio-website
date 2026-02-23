@@ -1,0 +1,8 @@
+﻿App.tsx(3,66): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+components/Navbar.tsx(3,35): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+components/RevealOnScroll.tsx(2,24): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
+components/ThemeToggle.tsx(2,27): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+pages/Contact.tsx(3,27): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+pages/Home.tsx(3,22): error TS2307: Cannot find module 'react-router-dom' or its corresponding type declarations.
+pages/Home.tsx(4,41): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+pages/Projects.tsx(3,30): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.

@@ -31,8 +31,8 @@ export const CONTENT = {
       year: '2024',
       description: 'Award-winning AI application using LLMs to analyze blood reports and provide actionable health insights. Features personalized diet suggestions and report history tracking.',
       tech: ['React', 'Flask', 'Gemini API', 'MongoDB'],
-      imageUrl: 'https://picsum.photos/800/600?grayscale&random=1',
-      homeImage: 'https://picsum.photos/800/600?grayscale&blur=1'
+      imageUrl: '/images/labseva_dash.png',
+      homeImage: '/images/labseva_bg.png'
     },
     {
       id: '02',
@@ -41,8 +41,8 @@ export const CONTENT = {
       year: '2024',
       description: 'Full-stack real estate platform featuring a neumorphic UI, real-time property search, and a calendar-based user dashboard. Integrated Firebase for storage and Socket.io for live updates.',
       tech: ['React', 'Node.js', 'MySQL', 'Socket.io'],
-      imageUrl: 'https://picsum.photos/800/600?grayscale&random=2',
-      homeImage: 'https://picsum.photos/800/601?grayscale&blur=1'
+      imageUrl: '/images/propease_ui.png',
+      homeImage: '/images/propease_bg.png'
     },
     {
       id: '03',
@@ -51,8 +51,8 @@ export const CONTENT = {
       year: 'In Progress',
       description: 'Cross-platform mobile app for streamlined property rentals. Features include map-based browsing, Google login, and an integrated AI chatbot for property suggestions.',
       tech: ['React Native', 'Expo', 'Supabase', 'AI Chatbot'],
-      imageUrl: 'https://picsum.photos/800/600?grayscale&random=3',
-      homeImage: 'https://picsum.photos/800/602?grayscale&blur=1'
+      imageUrl: '/images/reestate_app.png',
+      homeImage: '/images/reestate_bg.png'
     }
   ],
   CONTACT: {

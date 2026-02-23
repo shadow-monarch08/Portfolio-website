@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    base: "./",
+    base: "/",
     // Removed react() plugin as we are using CDN dependencies and no local React
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY),
