@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import { CONTENT } from "../constants/content";
 
 // Initialize the client with the API key from the environment
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
 
 export const sendMessageToDigitalTwin = async (message: string): Promise<string> => {
   try {

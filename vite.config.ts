@@ -8,8 +8,5 @@ export default defineConfig(({ mode }) => {
   return {
     base: "/",
     // Removed react() plugin as we are using CDN dependencies and no local React
-    define: {
-      'process.env.API_KEY': JSON.stringify(env.API_KEY),
-    },
   };
 });
