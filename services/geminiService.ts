@@ -2,12 +2,19 @@
 import { GoogleGenAI } from "@google/genai";
 import { CONTENT } from "../constants/content";
 
-// Initialize the client with the API key from the environment
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
-
+let ai: GoogleGenAI | null = null;
+const initAI = () => {
+  if (!ai) {
+    const apiKey = import.meta.env.VITE_API_KEY;
+    if (!apiKey) throw new Error("API Key missing");
+    ai = new GoogleGenAI({ apiKey });
+  }
+  return ai;
+};
 export const sendMessageToDigitalTwin = async (message: string): Promise<string> => {
   try {
-    const response = await ai.models.generateContent({
+    const client = initAI();
+    const response = await client.models.generateContent({
       model: 'gemini-2.5-flash',
       contents: message,
       config: {
