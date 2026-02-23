@@ -12,7 +12,7 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center px-6 pt-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto w-full z-10">
-          <p className="text-zinc-500 text-sm tracking-[0.2em] mb-8 animate-fade-in">{CONTENT.HERO.PRE_TITLE}</p>
+          <p className="text-zinc-500 text-sm tracking-[0.2em] mt-4 mb-8 animate-fade-in">{CONTENT.HERO.PRE_TITLE}</p>
           <h1 className="text-6xl md:text-9xl font-display font-medium tracking-tight leading-[0.9] text-zinc-900 dark:text-white mb-12 animate-fade-in-up">
             {CONTENT.HERO.TITLE_PREFIX} <br />
             <span className="text-zinc-400 dark:text-zinc-500">{CONTENT.HERO.TITLE_SUFFIX}</span>
