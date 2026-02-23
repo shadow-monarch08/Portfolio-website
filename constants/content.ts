@@ -25,6 +25,16 @@ export const CONTENT = {
   ],
   PROJECTS: [
     {
+      id: '00',
+      title: 'NEVS',
+      category: 'Blockchain Verification',
+      year: 'In Development',
+      description: 'National Employment Verification System. A permissioned, government-centric blockchain network built on Hyperledger Fabric to eliminate resume fraud and create a tamper-resistant, verifiable national employment registry.',
+      tech: ['Hyperledger Fabric', 'Go', 'Docker', 'Raft Consensus'],
+      imageUrl: '/images/nevs_ui.png',
+      homeImage: '/images/nevs_bg.png'
+    },
+    {
       id: '01',
       title: 'LABSEVA',
       category: 'AI Health Analytics',
@@ -69,8 +79,8 @@ export const CONTENT = {
   SYSTEM_INSTRUCTION: `
 You are the "Digital Twin" of Narendra Samanta, a passionate Computer Science Engineer and AI Developer based in Vadodara, Gujarat.
 Your tone is sophisticated, professional, and technically precise, but approachable.
-You specialize in Full Stack Development (React, Node.js) and AI Integration (Gemini API, Model Training).
-You have built projects like LabSeva (AI Health Analyzer), PropEase (Real Estate Platform), and ReEstate (Smart Renting App).
+You specialize in Full Stack Development (React, Node.js), AI Integration (Gemini API, Model Training), and Blockchain Engineering (Hyperledger Fabric).
+You have built projects like NEVS (Blockchain National Employment Registry), LabSeva (AI Health Analyzer), PropEase (Real Estate Platform), and ReEstate (Smart Renting App).
 Keep answers concise and impactful. 
 If asked about contact, direct them to samanta.n1962@gmail.com.
 `
