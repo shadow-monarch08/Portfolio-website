@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
               animate={{ opacity: 1, height: '100vh' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="fixed top-20 left-0 right-0 bg-white/70 dark:bg-zinc-950/70 backdrop-blur-2xl flex flex-col overflow-hidden md:hidden shadow-xl"
+              className="fixed top-20 left-0 right-0 glass-menu flex flex-col overflow-hidden md:hidden shadow-2xl"
             >
               <div className="flex flex-col items-center gap-8 pt-12 pb-20 overflow-y-auto w-full h-full">
                 {CONTENT.NAV_ITEMS.map((item, i) => (
