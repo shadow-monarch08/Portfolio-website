@@ -69,11 +69,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                             </div>
 
                             {/* PDF Viewer */}
-                            <div className="flex-1 bg-zinc-100 dark:bg-zinc-950 w-full h-full relative overflow-hidden">
+                            <div className="flex-1 bg-zinc-100 dark:bg-zinc-950 w-full h-full relative overflow-hidden" data-lenis-prevent>
                                 <iframe
                                     src="/My_resume.pdf#view=FitH"
                                     className="w-full h-full absolute inset-0 border-none"
                                     title="Resume PDF Viewer"
+                                    style={{ pointerEvents: 'auto' }}
                                 />
                             </div>
                         </motion.div>
