@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, X } from 'lucide-react';
 
@@ -6,28 +6,18 @@ interface ToastProps {
     isVisible: boolean;
     message: string;
     onClose: () => void;
-    duration?: number;
 }
 
-export const Toast: React.FC<ToastProps> = ({ isVisible, message, onClose, duration = 5000 }) => {
-    useEffect(() => {
-        if (isVisible) {
-            const timer = setTimeout(() => {
-                onClose();
-            }, duration);
-            return () => clearTimeout(timer);
-        }
-    }, [isVisible, duration, onClose]);
-
+export const Toast: React.FC<ToastProps> = ({ isVisible, message, onClose }) => {
     return (
         <AnimatePresence>
             {isVisible && (
                 <motion.div
-                    initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 20, scale: 0.9 }}
+                    initial={{ opacity: 0, x: 50, scale: 0.9 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    exit={{ opacity: 0, x: 50, scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                    className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] flex items-center justify-center pointer-events-none"
+                    className="fixed bottom-10 right-10 z-[100] flex items-center justify-end pointer-events-none"
                 >
                     <div className="toast-container pointer-events-auto shadow-2xl dark:shadow-zinc-900/50">
                         <div className="toast-inner bg-white dark:bg-zinc-950 px-6 py-3 rounded-full flex items-center gap-3">
