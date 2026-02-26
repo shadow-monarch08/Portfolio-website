@@ -46,14 +46,14 @@ html.lenis body {
 
 /* Deeper Glass Effect for Fullscreen Menus */
 .glass-menu {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .dark .glass-menu {
-  background: rgba(5, 5, 5, 0.65);
+  background: rgba(5, 5, 5, 0.8);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
