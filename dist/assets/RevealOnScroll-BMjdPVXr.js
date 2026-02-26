@@ -1,1 +1,0 @@
-import{j as o,m as a}from"./index-nFXl7ZVR.js";const r=({children:i,className:t="",delay:e=0})=>o.jsx(a.div,{className:t,initial:{opacity:0,y:40},whileInView:{opacity:1,y:0},viewport:{once:!0,margin:"-50px"},transition:{duration:.8,delay:e/1e3,ease:[.16,1,.3,1]},children:i});export{r as R};
