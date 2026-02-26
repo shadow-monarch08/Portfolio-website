@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const SECTIONS = [
     { id: 'hero', label: 'Intro' },
@@ -10,11 +10,36 @@ const SECTIONS = [
 
 export const ScrollIndicator: React.FC = () => {
     const [activeSection, setActiveSection] = useState('hero');
+    const observer = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
-        const handleScroll = () => {
+        // Find all section elements
+        const elements = SECTIONS.map(section => document.getElementById(section.id)).filter(Boolean) as HTMLElement[];
+
+        // Configure intersection observer to trigger when a section takes up a significant portion of the screen
+        const options = {
+            root: null,
+            rootMargin: '-20% 0px -40% 0px', // Adjusted to trigger earlier when scrolling down
+            threshold: 0,
+        };
+
+        const callback = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        };
+
+        observer.current = new IntersectionObserver(callback, options);
+
+        elements.forEach(element => {
+            if (observer.current) observer.current.observe(element);
+        });
+
+        // Fallback or initial state check (if loaded mid-page)
+        const handleInitialScroll = () => {
             let currentSection = 'hero';
-            // Find the section that is most visible
             for (const section of SECTIONS) {
                 const element = document.getElementById(section.id);
                 if (element) {
@@ -26,13 +51,16 @@ export const ScrollIndicator: React.FC = () => {
                 }
             }
             setActiveSection(currentSection);
+            window.removeEventListener('scroll', handleInitialScroll);
+        }
+
+        window.addEventListener('scroll', handleInitialScroll, { passive: true });
+        handleInitialScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleInitialScroll);
+            if (observer.current) observer.current.disconnect();
         };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        // Trigger once on mount
-        handleScroll();
-
-        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const scrollToSection = (id: string) => {
